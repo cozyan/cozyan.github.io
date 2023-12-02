@@ -8,7 +8,7 @@
 	} */
 
 	.prose code {
-		@apply text-base;
+		@apply text-sm;
 	}
 
 	@font-face {

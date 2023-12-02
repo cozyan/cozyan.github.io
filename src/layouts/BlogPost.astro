@@ -69,35 +69,6 @@ const articleDate = pubDate.toISOString()
 			<slot />
 		</div>
 	</article>
-
-	<button id='goTopButton' class='go-top-button'>Go to Top</button>
-	<script>
-		const goTopButton = document.getElementById('goTopButton')
-
-		if (goTopButton) {
-			goTopButton.addEventListener('click', function () {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth'
-				})
-			})
-		}
-	</script>
-	<style>
-		.go-top-button {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			background-color: #ccc; /* Red background */
-			color: white; /* White text */
-			border: none; /* No border */
-			cursor: pointer; /* Mouse pointer on hover */
-			/* border-radius: 50%; Rounded corners */
-			padding: 10px 15px; /* Some padding */
-			font-size: 18px; /* Increase font size */
-			z-index: 1000; /* High z-index */
-		}
-	</style>
 </BaseLayout>
 
 <script>

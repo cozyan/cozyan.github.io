@@ -6,6 +6,7 @@ import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
+import GoTopButton from '@/components/GoTopButton'
 const { title, description, image, articleDate } = Astro.props
 ---
 
@@ -24,6 +25,7 @@ const { title, description, image, articleDate } = Astro.props
 			<Header />
 			<slot />
 			<Footer />
+			<GoTopButton />
 		</main>
 		<TwSizeIndicator />
 		<EditBlog />
