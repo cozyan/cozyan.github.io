@@ -13,13 +13,15 @@ const posts = await getPosts(MAX_POSTS)
 	.fancy-p {
 		padding: 1em;
 		border: 1px dashed #ccc;
-		color: #333;
+		color: #333333ce;
 		transition: all 0.3s ease;
+		@apply dark:text-zinc-400;
 	}
 
 	.fancy-p:hover {
-		color: #666;
+		color: #000000;
 		border-color: #999;
+		@apply dark:text-zinc-100;
 	}
 </style>
 
