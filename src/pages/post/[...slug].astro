@@ -39,7 +39,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 	headings={headings}
 	readTime={remarkPluginFrontmatter.minutesRead}
 >
-	<div class='grid grid-cols-1 md:grid-cols-[20%_auto] gap-10 mt-8'>
+	<div class='grid grid-cols-1 md:grid-cols-[20%_auto] gap-8 mt-8'>
 		<!-- aside  -->
 		<aside class='md:flex flex-col gap-8 hidden'>
 			<Share />
@@ -50,7 +50,10 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 
 		<!-- post -->
 		<article class='max-w-full w-full'>
-			<div class='prose prose-lg md:prose-xl dark:prose-invert mb-12 min-w-full'>
+			<div
+				class='prose prose-base md:prose-base dark:prose-invert mb-12 min-w-full leading-tight
+						md:text-base md:leading-normal'
+			>
 				<Content components={{ pre: Code, SButton }} />
 			</div>
 

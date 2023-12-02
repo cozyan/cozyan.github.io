@@ -9,9 +9,11 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	author: 'DanielCG', // Site author
-	title: 'Astro Theme OpenBlog', // Site title.
-	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // Description to display in the meta tags
+	author: 'Cozyan', // Site author
+	title: "Cozyan's Canvas", // Site title.
+	description:
+		"Cozyan's Canvas: Where I share my tech adventures, life stories, \
+					and financial talks — it's all about keeping it real, relatable, and a bit fun!", // Description to display in the meta tags
 	lang: 'en-GB',
 	ogLocale: 'en_GB',
 	shareMessage: 'Share this post', // Message to share a post on social media

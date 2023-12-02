@@ -1,0 +1,127 @@
+---
+heroImage: /src/assets/images/green-leaves-close-up-portrait.jpg
+category: Data Science
+description: >-
+  Dive into the world of A/B Testing in Data Science, where we unravel how
+  subtle changes can drive big decisions in tech, marketing, and beyond!
+pubDate: 2023-12-01T23:00:00.000Z
+tags:
+  - DataScience
+  - A/B Testing
+title: 'Data Science: A/B Testing'
+---
+
+# `1` - A/B Testing
+
+## `1.1` - What is A/B test
+
+- An A/B test is an experiment
+  - All elements are constant except for one variable
+  - Compare a control group A against a treatment group B (all variables are identical between two groups except one factor that’s been tested)
+    - Control group: existing features
+    - Treatment group: new features
+- Variants
+  - Different versions of a product or user experience
+  - Examples:
+    - color of a button
+    - different backend algorithms to display search results
+    - Google tested 41 gradations of blue on google search result pages in each treatment group the color is different ⇒ result shows that color schemes significantly changed user engagement
+- 2 variants
+  - A/B tests (control group, treatment group)
+- More than 2 variants
+  - A/B/N tests
+- different names: A/B/N tests, randomized controlled experiments, controlled experiments, split tests
+
+## `1.2` - Why A/B test
+
+- Goal
+  - make data driven decisions only when results are **reliable** and **repeatable** ⇒ make right decision
+    - To make results reproducible:
+      - the factor we’re testing is the cause of the change in the metric so that when launching the feature to all the traffic the impact can be predicted from the treatment effect measured in the experiment
+  - best scientific way to establish causality with high probability
+  - able to detect small changes that are hard to detect with other techniques, such as change over time
+  - able to detect unexpected change
+
+## `1.3` - Steps to run A/B tests
+
+- Steps:
+  1. Prerequisites
+  2. Experiment Design
+  3. Running Experiment
+  4. Result to Decision
+  5. Post-launch monitoring
+
+### `1.3.1` Step 1: Prerequisites
+
+Here are the experiment prerequisites before running the experiment:
+
+1. Define key metrics to measure the goal of an experiment
+   - formally known as “Overall Evaluation Criterion (OEC)”
+     - OEC should be agreed upon by different stakeholders and practically measured
+   - Example:
+     - Color of checkout button affects revenue ⇒ OEC: revenue / user / month
+2. Changes are easy to make as you want to compare different variants and find the one that has the highest positive impact on OEC
+   - Difficult changes introduce complexity to generate variants
+     - Example: Re-designing the entire website maybe too difficult
+3. Have enough “randomization units” to be assigned to different variants
+   - Randomization unit:
+     - “Who” or “what” randomly allocated to different groups
+     - The most common randomization unit is USER
+     - How many is enough?
+       - thousands randomization unit: larger the number the smaller effect can be detected
+
+### `1.3.2` Step 2: Experiment Design
+
+Things to be considered
+
+1. What population to select
+   - Specific population vs. all users
+     - Sometimes it is useful to run experiments for a specific segment as the change only affects the segment
+       - Example:
+         - A new feature that is only available for users in a particular geographic region
+2. Size of an experiment
+   - We need to compute the sample size of the experiment in order to achieve the required statistical power, detecting a small effect will need more users
+   - Statistically calculate the sample size
+3. How long to run an experiment (duration)
+   - Seasonality
+   - Day of week
+   - Primacy and novelty effect
+
+### `1.3.3` Step 3: Running Experiment
+
+- Collect data
+
+  - Data scientists work with engineers to instrument loggings to get logged data
+
+    Data scientists and engineers collaborate to collect and store data about a software system's behavior in logs. Data scientists analyze this logged data to find patterns, anomalies, and insights that can be used to enhance system performance, user experiences, and make data-driven decisions.
+
+  - Utilize companies platform which is already done automatically
+
+### `1.3.4` Step 4: Result to Decision
+
+Check & interpret results to make decisions (Data Scientists spend the most time)
+
+1. Sanity checks: make sure data are reliable
+   - Passed → continue with analysis (use the results to make decision)
+   - Failed → discard the results, look into root cause, re-run experiments
+2. When making decisions, consider
+   - Tradeoffs between different metrics
+     - Scenario: different metrics move to opposite directions
+       - Example: user engagement goes up but revenue goes down
+   - Cost of launching a change
+     - Example:
+       - Engineering maintenance (new updates may introduce complexity and bugs)
+       - Opportunity cost of giving a different idea
+     - When costs are high
+       - Benefit should outweigh the cost
+       - Set practical significance boundary to reflect the cost
+       - only launch the product if the result is practically significant
+     - When costs are low
+       - Launch any positive changes
+
+### `1.3.5` Step 5: Post-launch Monitoring
+
+Long-term effect:
+
+- Short-term effect can be different from long-term effect due to various reasons
+- Example: Novelty effect (that could help future iterations)

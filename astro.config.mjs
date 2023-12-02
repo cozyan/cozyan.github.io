@@ -8,6 +8,7 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 export default defineConfig({
 	site: 'https://cozyan.github.io/', // Write here your website url
 	markdown: {
+		syntaxHighlight: 'prism',
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
 		shikiConfig: {
