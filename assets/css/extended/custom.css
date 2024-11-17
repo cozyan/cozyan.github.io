@@ -1,0 +1,44 @@
+/* Custom styles added to demo */
+
+.twitter-tweet {
+    margin: auto;
+}
+
+iframe {
+    border-radius: var(--radius) !important;
+}
+
+.home-info ul {
+    padding-inline-start: 20px;
+}
+
+.entry-cover img {
+    border: 1px solid var(--border);
+}
+
+/* Define the font face */
+@font-face {
+    font-family: 'Romanica';
+    src: url('../fonts/Romanica.woff2') format('woff2');
+         /* url('/fonts/cambridge-regular.woff') format('woff'),
+         url('/fonts/cambridge-regular.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply the font */
+body {
+    font-family: 'Romanica', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+/* For Chinese characters, keep the CJK font */
+:lang(zh) {
+    font-family: 'Noto Sans Traditional Chinese', 'Microsoft YaHei', sans-serif !important;
+}
+
+:root {
+    --main-width: 700px;   /* Increase main content width */
+}
