@@ -1,0 +1,124 @@
+/* Custom styles added to demo */
+
+.twitter-tweet {
+    margin: auto;
+}
+
+iframe {
+    border-radius: var(--radius) !important;
+}
+
+.home-info ul {
+    padding-inline-start: 20px;
+}
+
+.entry-cover img {
+    border: 1px solid var(--border);
+}
+
+/* Define the font face */
+@font-face {
+    font-family: 'Romanica';
+    src: url('../fonts/Romanica.woff2') format('woff2');
+         /* url('/fonts/cambridge-regular.woff') format('woff'),
+         url('/fonts/cambridge-regular.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply the font */
+body {
+    font-family: 'Romanica', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+/* For Chinese characters, keep the CJK font */
+:lang(zh) {
+    font-family: 'Noto Sans Traditional Chinese', 'Microsoft YaHei', sans-serif !important;
+}
+
+:root {
+    --main-width: 700px;   /* Increase main content width */
+}
+
+/* Change link hover effect */
+.post-content a:hover {
+    color: #666;  /* Change color on hover */
+    transition: all 0.2s ease;  /* Smooth transition */
+    /* Remove the default underline if you want */
+    box-shadow: none;  
+}
+
+/* Link highlight effect */
+.post-content a {
+    /* Remove default underline */
+    box-shadow: 0 2px var(--code-bg);
+}
+
+.post-content a:hover {
+    background-color: var(--code-bg);  /* Use theme's code background color */
+}
+
+
+/* Archive entry title color on hover */
+.archive-entry:hover .archive-entry-title {
+    color: var(--arc-background-gradient-color0);  /* Change color on hover */
+    transition: color 0.3s ease;
+}
+
+.archive-entry:hover .archive-meta,
+.archive-entry:hover .archive-count {
+    color: var(--arc-background-gradient-color0);
+    transition: color 0.3s ease;
+}
+
+
+/* Blog post list hover effects */
+.post-entry:hover {
+    transform: none;  /* Remove the default scale animation if you want */
+    background: var(--arc-background-gradient-color0);  /* Background color on hover */
+    transition: all 0.3s ease;
+}
+
+/* Blog post title color on hover */
+.post-entry:hover .entry-header h2 {
+    color: var(--code-bg);  /* Change title color on hover */
+    transition: color 0.3s ease;
+}
+
+.dark .post-entry:hover .entry-content {
+    color: var(--code-bg);
+    transition: color 0.3s ease;
+}
+
+/* Full width header background */
+.header {
+    background: #e8e8e8;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Nav container for content */
+.nav {
+    max-width: var(--nav-width);
+    padding: 0 var(--gap);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Adjust main content */
+.main {
+    padding-top: var(--header-height);
+}
+
+/* Dark mode */
+.dark .header {
+    background: #2d2d2d;
+}
