@@ -92,3 +92,33 @@ body {
     color: var(--code-bg);
     transition: color 0.3s ease;
 }
+
+/* Full width header background */
+.header {
+    background: #e8e8e8;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Nav container for content */
+.nav {
+    max-width: var(--nav-width);
+    padding: 0 var(--gap);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Adjust main content */
+.main {
+    padding-top: var(--header-height);
+}
+
+/* Dark mode */
+.dark .header {
+    background: #2d2d2d;
+}
