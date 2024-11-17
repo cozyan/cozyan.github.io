@@ -42,3 +42,53 @@ body {
 :root {
     --main-width: 700px;   /* Increase main content width */
 }
+
+/* Change link hover effect */
+.post-content a:hover {
+    color: #666;  /* Change color on hover */
+    transition: all 0.2s ease;  /* Smooth transition */
+    /* Remove the default underline if you want */
+    box-shadow: none;  
+}
+
+/* Link highlight effect */
+.post-content a {
+    /* Remove default underline */
+    box-shadow: 0 2px var(--code-bg);
+}
+
+.post-content a:hover {
+    background-color: var(--code-bg);  /* Use theme's code background color */
+}
+
+
+/* Archive entry title color on hover */
+.archive-entry:hover .archive-entry-title {
+    color: var(--arc-background-gradient-color0);  /* Change color on hover */
+    transition: color 0.3s ease;
+}
+
+.archive-entry:hover .archive-meta,
+.archive-entry:hover .archive-count {
+    color: var(--arc-background-gradient-color0);
+    transition: color 0.3s ease;
+}
+
+
+/* Blog post list hover effects */
+.post-entry:hover {
+    transform: none;  /* Remove the default scale animation if you want */
+    background: var(--arc-background-gradient-color0);  /* Background color on hover */
+    transition: all 0.3s ease;
+}
+
+/* Blog post title color on hover */
+.post-entry:hover .entry-header h2 {
+    color: var(--code-bg);  /* Change title color on hover */
+    transition: color 0.3s ease;
+}
+
+.dark .post-entry:hover .entry-content {
+    color: var(--code-bg);
+    transition: color 0.3s ease;
+}
