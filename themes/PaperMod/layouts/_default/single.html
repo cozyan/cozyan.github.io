@@ -43,12 +43,23 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
+    {{- if eq .Lang "en" }}
+        {{- if .Params.tags }}
+        <ul class="post-tags">
+            {{- range (.GetTerms "tags") }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    {{- else if eq .Lang "cn" }}
+        {{- with .Params.cntags }}
+        <ul class="post-tags">
+            {{- range . }}
+            <li><a href="/cn/cntags/{{ . | urlize }}">{{ . }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    {{- end }}
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}

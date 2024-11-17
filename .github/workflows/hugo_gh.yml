@@ -1,4 +1,4 @@
-name: Deploy Hugo PaperMod Demo to Pages
+name: Deploy Hugo to GitHub Pages
 
 on:
   push:
@@ -6,9 +6,6 @@ on:
       - "images/**"
       - "LICENSE"
       - "README.md"
-    branches:
-      - master
-      - 41-scaffold-the-hugo-blog
   workflow_dispatch:
     # manual run
     inputs:
@@ -66,6 +63,7 @@ jobs:
           path: ./public
   # Deployment job
   deploy:
+    if: github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
