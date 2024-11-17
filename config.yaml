@@ -1,6 +1,6 @@
 baseURL: "https://cozyan.github.io"
 languageCode: en-us
-title: Cozyan's Canvas
+title: "Yan Liang | 梁琰"
 copyright: "© 2024 cozyan.github.io. All rights reserved."
 paginate: 5
 theme: [PaperMod]
@@ -24,6 +24,9 @@ languages:
       series: series
     menu:
       main:
+        - name: About
+          url: about
+          weight: 1
         - name: Blog
           url: blog
           weight: 5
@@ -39,13 +42,15 @@ languages:
   cn:
     languageName: "简中"
     weight: 2
-    title: "Cozyan's Canvas"
     taxonomies:
       category: CNcategories
       tag: CNtags
       series: CNseries
     menu:
       main:
+        - name: 关于我
+          url: about/
+          weight: 1
         - name: 博客
           url: blog/
           weight: 5
@@ -64,10 +69,11 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  # description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  # author: Theme PaperMod
   # author: ["Me", "You"] # multiple authors
 
+  browserTitle: "Yan Liang | 梁琰"
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: true
@@ -82,23 +88,23 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-  images: ["images/papermod-cover.png"]
+  # images: ["images/papermod-cover.png"]
 
-  profileMode:
-    enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
+  # profileMode:
+  #   enabled: false
+  #   title: PaperMod
+  #   imageUrl: "#"
+  #   imageTitle: my image
+  #   # imageWidth: 120
+  #   # imageHeight: 120
+  #   buttons:
+  #     - name: Archives
+  #       url: archives
+  #     - name: Tags
+  #       url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "Cozyan's Canvas"
     Content: >
       Hi! 👋 I'm Cozyan, just a regular person navigating the ups and downs of tech 🖥️, 
       
@@ -128,10 +134,9 @@ params:
   #   appendFilePath: true # to append file path to Edit link
 
   label:
-  iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  text: "Home"
-  icon: icon.png
-  iconHeight: 35
+    text: "Home"
+    icon: "/assets/images/avatar.png"
+    iconHeight: 35
 
   analytics:
       google:
@@ -140,7 +145,7 @@ params:
   assets:
     disableHLJS: true
   #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
+    favicon16x16: "/assets/images/avatar.png"
   #     favicon32x32: "<link / abs url>"
   #     apple_touch_icon: "<link / abs url>"
   #     safari_pinned_tab: "<link / abs url>"
