@@ -6,8 +6,8 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
-    padding: 0 20px;
-    border-bottom: 1px solid var(--border);
+    padding: 0 15px;
+    max-width: 1000px;
 }
 
 .nav a {
