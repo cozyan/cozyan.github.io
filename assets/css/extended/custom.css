@@ -38,6 +38,14 @@ body {
         --content-line-height: 1.8;
         --blog-title-size: 42px;
     }
+
+    .first-entry .entry-content {
+        font-size: 19px;
+    }
+    
+    .first-entry .entry-content p {
+        margin-bottom: 30px;  /* Adds space between paragraphs */
+    }
 }
 
 /* Apply the variables */
@@ -109,4 +117,8 @@ body {
 .header {
     border-bottom: 1px solid var(--border);
     background-color: var(--border);
+}
+
+.first-entry .entry-content {
+    color: var(--primary);  /* Replace with your desired color */
 }
