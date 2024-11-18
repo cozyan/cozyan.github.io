@@ -184,6 +184,12 @@ params:
   #     minMatchCharLength: 0
   #     keys: ["title", "permalink", "summary", "content"]
 
+  gitalk:
+    owner: "cozyan"
+    repo: "blog-gitalk"
+    clientId: "Ov23lims4tKqXdOWGaWV"
+    clientSecret: "6828096289e2edc86d49444bad1819cb1e157b6e"
+    labels: ["gitalk"]
 
 services:
   instagram:
