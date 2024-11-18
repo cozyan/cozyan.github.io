@@ -21,8 +21,13 @@
 
 .first-entry .entry-content {
     margin: 14px 0;
-    font-size: 18px;
+    font-size: 16px;
     -webkit-line-clamp: 3;
+    white-space: pre-wrap;
+}
+
+.first-entry .entry-content p {
+    margin-bottom: 20px;  /* Adds space between paragraphs */
 }
 
 .first-entry .entry-footer {

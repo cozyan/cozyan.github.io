@@ -24,15 +24,13 @@ languages:
       series: series
     params:
       homeInfoParams:
-        Title: "Cozyan's Canvas"
-        Content: >
-          Hi! 👋 I'm Cozyan, just a regular person navigating the ups and downs of tech 🖥️, 
+        Title: "Yan's Canvas"
+        Content: |
+          Hi! 👋 I'm a data engineer based in Netherlands. 
           
-          life's rollercoasters, and the ever-twisting world of finance.
+          Welcome to my blog — this isn't just a platform for sharing technology, but also a gathering place for my personal thoughts and life insights. 
           
-          At Cozyan's Canvas 🎨, I share my stories and discoveries, 
-          
-          all served with a dash of humor and a slice of beef 🥩 for relatability 😊.
+          Beyond technical articles, I also write about everyday life, travel experiences, and my reflections on the world.
     menu:
       main:
         - name: About
@@ -59,17 +57,13 @@ languages:
       series: CNseries
     params:
       homeInfoParams:
-        Title: "Cozyan's Canvas"
-        Content: >
-          嗨嗨大家！👋 
+        Title: "Yan's Canvas"
+        Content: |
+          Hi! 👋 我是一名一名常驻荷兰的数据工程师。
 
-          我是Cozyan，一个普通人，一边在技术的深坑里摸爬滚打 🖥️，一边坐着生活的过山车 🎢，
-
-          还顺便瞄一眼金融世界的花花绿绿 💰。
-
-          我会分享我的日常碎碎念和各种奇怪发现，轻松带点沙雕风，还会塞点“硬核干货” 🥩，
-
-          希望能让你看着开心又觉得有点用！快来玩吧～😊
+          欢迎来到我的博客——这不仅是一个技术分享的平台，更是我个人思考和生活感悟的集散地。
+          
+          除了技术文章，我还会写一些关于日常生活、旅行见闻，以及我对世界的种种思考。
     menu:
       main:
         - name: 关于我
