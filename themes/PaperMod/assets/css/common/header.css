@@ -2,10 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    /* max-width: calc(var(--nav-width) + var(--gap) * 2); */
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
 }
 
 .nav a {

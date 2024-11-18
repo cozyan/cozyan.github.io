@@ -16,38 +16,50 @@ iframe {
     border: 1px solid var(--border);
 }
 
-/* Define the font face */
-@font-face {
-    font-family: 'Romanica';
-    src: url('../fonts/Romanica.woff2') format('woff2');
-         /* url('/fonts/cambridge-regular.woff') format('woff'),
-         url('/fonts/cambridge-regular.ttf') format('truetype'); */
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* Apply the font */
 body {
-    font-family: 'Romanica', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-    line-height: 1.8;
-    font-size: 19px;
-}
-
-/* For Chinese characters, keep the CJK font */
-:lang(zh) {
-    font-family: 'Noto Sans Traditional Chinese', 'Microsoft YaHei', sans-serif !important;
+    font-family: 'Merriweather Sans', 'Trebuchet MS', Tahoma, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
     --main-width: 700px;   /* Increase main content width */
+    --content-font-size: 16px;
+    --content-line-height: 1.7;
+    --blog-title-size: 34px;
+}
+
+/* Laptop/Desktop styles */
+@media screen and (min-width: 768px) {
+    :root {
+        --content-font-size: 19px;
+        --content-line-height: 1.8;
+        --blog-title-size: 42px;
+    }
+}
+
+/* Apply the variables */
+.post-content {
+    font-size: var(--content-font-size);
+    line-height: var(--content-line-height);
+}
+
+.post-title,
+.first-entry .entry-header h1 {
+    font-size: var(--blog-title-size);
+}
+
+/* Optional: adjust other related elements */
+.entry-header h2 {
+    font-size: calc(var(--content-font-size) * 1.5);
 }
 
 /* Change link hover effect */
 .post-content a:hover {
     color: #666;  /* Change color on hover */
     transition: all 0.2s ease;  /* Smooth transition */
-    /* Remove the default underline if you want */
     box-shadow: none;  
 }
 
@@ -68,6 +80,7 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Button color on hover */
 .archive-entry:hover .archive-meta,
 .archive-entry:hover .archive-count {
     color: var(--arc-background-gradient-color0);
@@ -91,34 +104,4 @@ body {
 .dark .post-entry:hover .entry-content {
     color: var(--code-bg);
     transition: color 0.3s ease;
-}
-
-/* Full width header background */
-.header {
-    background: #e8e8e8;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
-}
-
-/* Nav container for content */
-.nav {
-    max-width: var(--nav-width);
-    padding: 0 var(--gap);
-    margin: 0 auto;
-    width: 100%;
-}
-
-/* Adjust main content */
-.main {
-    padding-top: var(--header-height);
-}
-
-/* Dark mode */
-.dark .header {
-    background: #2d2d2d;
 }
