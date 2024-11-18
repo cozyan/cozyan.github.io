@@ -51,7 +51,7 @@ languages:
         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
     
   cn:
-    languageName: "简中"
+    languageName: "中文"
     weight: 2
     taxonomies:
       category: CNcategories

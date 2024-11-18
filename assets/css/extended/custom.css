@@ -16,20 +16,12 @@ iframe {
     border: 1px solid var(--border);
 }
 
-/* Define the font face */
-@font-face {
-    font-family: 'Romanica';
-    src: url('../fonts/Romanica.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* Apply the font */
 body {
-    font-family: 'Romanica', "Trebuchet MS", Tahoma, "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    font-family: 'Merriweather Sans', 'Trebuchet MS', Tahoma, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     line-height: 1.7;
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
