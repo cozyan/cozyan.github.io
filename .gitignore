@@ -3,7 +3,7 @@
 # Hugo
 public/*
 .hugo_build.lock
-resources/_gen/
+resources/_gen/*
 
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
@@ -28,3 +28,7 @@ _testmain.go
 
 *.exe
 *.test
+content/.obsidian/app.json
+
+# Obsidian
+content/.obsidian/*
