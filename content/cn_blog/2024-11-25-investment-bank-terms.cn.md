@@ -1,7 +1,7 @@
 ---
 author: ["Yan Liang"]
 title: "投行基本知识"
-date: "2024-11-26"
+date: "2024-11-25"
 CNtags: ["金融"]
 CNcategories: ["金融"]
 CNseries: ["金融"]
