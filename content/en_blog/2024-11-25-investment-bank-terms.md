@@ -1,10 +1,10 @@
 ---
 author: ["Yan Liang"]
 title: "Basic Knowledge of Investment Banking"
-date: "2024-11-26"
-CNtags: ["Finance"]
-CNcategories: ["Finance"]
-CNseries: ["Finance"]
+date: "2024-11-25"
+tags: ["Finance"]
+categories: ["Finance"]
+series: ["Finance"]
 ShowToc: false
 TocOpen: false
 ---
