@@ -84,14 +84,14 @@ body {
 
 /* Archive entry title color on hover */
 .archive-entry:hover .archive-entry-title {
-    color: var(--arc-background-gradient-color0);  /* Change color on hover */
+    color: #abd3b3;  /* Change color on hover */
     transition: color 0.3s ease;
 }
 
 /* Button color on hover */
 .archive-entry:hover .archive-meta,
 .archive-entry:hover .archive-count {
-    color: var(--arc-background-gradient-color0);
+    color: #abd3b3;
     transition: color 0.3s ease;
 }
 
@@ -99,7 +99,7 @@ body {
 /* Blog post list hover effects */
 .post-entry:hover {
     transform: none;  /* Remove the default scale animation if you want */
-    background: var(--arc-background-gradient-color0);  /* Background color on hover */
+    background: #abd3b3;  /* Background color on hover */
     transition: all 0.3s ease;
 }
 
