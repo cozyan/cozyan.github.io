@@ -74,11 +74,11 @@ body {
 /* Link highlight effect */
 .post-content a {
     /* Remove default underline */
-    box-shadow: 0 2px var(--code-bg);
+    box-shadow: 0 2px #abd3b3;
 }
 
 .post-content a:hover {
-    background-color: var(--code-bg);  /* Use theme's code background color */
+    background-color: #abd3b3;  /* Use theme's code background color */
 }
 
 
@@ -121,4 +121,20 @@ body {
 
 .first-entry .entry-content {
     color: var(--primary);  /* Replace with your desired color */
+}
+
+/* Override code block styles */
+.post-content pre {
+    background: var(--code-bg) !important;
+    padding: 1.5em;
+    border-radius: 5px;  /* More subtle border radius */
+    border: 1px solid var(--border);  /* Thinner border */
+}
+
+.post-content pre code {
+    background: transparent !important;  /* Remove code background */
+    color: var(--primary);
+    padding: 0;  /* Remove padding since pre handles it */
+    border: none;  /* Remove border */
+    border-radius: 0;  /* Remove border radius */
 }
