@@ -42,22 +42,23 @@ jobs:
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v3
-        # with:
-        #   ref: cozyan.github.io
+        uses: actions/checkout@v4
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Get Theme
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
       - name: Build with Hugo
         run: |
+          hugo version  # Check Hugo version
           hugo \
             --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
-          ls -la ./public  # Verify output directory exists and has content
+          echo "Hugo build exit code: $?"  # Check the exit code
+          ls -la ./public  # Verify output directory has content
+          find ./public -type f | wc -l  # Count files in output
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -73,4 +74,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
