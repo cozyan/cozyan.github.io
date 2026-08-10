@@ -2,6 +2,7 @@ import {
   renderContactSection,
   renderFooter,
   renderSiteHeader,
+  renderStarField,
   renderTicker,
 } from "./components.mjs";
 
@@ -37,6 +38,7 @@ export function renderAboutPage() {
 
   <main id="main">
     <section class="about-hero page-shell" aria-labelledby="about-page-title">
+      ${renderStarField("about")}
       <img class="about-avatar reveal" src="assets/avatar.png" alt="Illustrated portrait of Yan Liang" width="84" height="84" fetchpriority="high">
       <p class="eyebrow reveal">A little more about me</p>
       <h1 id="about-page-title" class="reveal">Here is the<br><em>short version.</em></h1>

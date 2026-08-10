@@ -4,6 +4,7 @@ import {
   renderProjectCard,
   renderSectionIntro,
   renderSiteHeader,
+  renderStarField,
   renderTicker,
   renderWritingCard,
 } from "./components.mjs";
@@ -37,6 +38,7 @@ export function renderPage() {
 
   <main id="main">
     <section class="hero page-shell" id="top" aria-labelledby="hero-title">
+      ${renderStarField("home")}
       <img class="hero-avatar reveal" src="assets/avatar.png" alt="Illustrated portrait of Yan Liang" width="52" height="52" fetchpriority="high">
       <p class="hero-note reveal">Products · essays · small experiments</p>
       <h1 id="hero-title" class="reveal">I make products<br>and write about<br><em>what I notice.</em></h1>

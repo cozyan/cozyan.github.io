@@ -125,6 +125,32 @@ export function renderTicker(items) {
   return `<div class="ticker-wrap" aria-hidden="true"><div class="ticker"><div>${content}</div></div></div>`;
 }
 
+export function renderStarField(variant = "home") {
+  const stars = [
+    "dot star-1",
+    "dot star-2",
+    "dot star-3",
+    "dot star-4",
+    "cross star-5",
+    "diamond star-6",
+    "dot star-7",
+    "cross star-8",
+    "dot star-9",
+    "ring star-10",
+    "dot star-11",
+    "diamond star-12",
+  ];
+
+  const starMarkup = stars
+    .map((classes) => `<span class="cosmic-star ${classes}"></span>`)
+    .join("");
+
+  return `<div class="star-field star-field-${escapeHtml(variant)}" aria-hidden="true">
+      ${starMarkup}
+      <span class="tiny-constellation"><i></i><i></i><i></i><b></b><b></b></span>
+    </div>`;
+}
+
 export function renderSiteHeader({ current = "home" } = {}) {
   const links = [
     ["home", "Home", "index.html#top"],
