@@ -1,13 +1,14 @@
 # Yan Liang portfolio
 
-A single-page portfolio built with HTML, CSS and a small amount of JavaScript. There is no frontend framework or runtime dependency.
+A small portfolio built with HTML, CSS and a little JavaScript. There is no frontend framework or runtime dependency.
 
 ## Project structure
 
 - `src/content.mjs` stores project and writing content
 - `src/components.mjs` contains reusable static HTML renderers
 - `src/page.mjs` composes the page
-- `scripts/build.mjs` generates `index.html`
+- `src/about.mjs` composes the About page
+- `scripts/build.mjs` generates `index.html` and `about.html`
 - `styles.css` contains the shared visual system
 - `script.js` handles reveal effects and the footer year
 

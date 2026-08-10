@@ -4,6 +4,6 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check script.js && node --check src/components.mjs && node --check src/content.mjs && node --check src/page.mjs && node --check scripts/build.mjs"
+    "check": "node --check script.js && node --check src/components.mjs && node --check src/content.mjs && node --check src/page.mjs && node --check src/about.mjs && node --check scripts/build.mjs"
   }
 }

@@ -5,7 +5,7 @@ export const projects = [
     category: "Personal product",
     title: ["TRACE"],
     summary:
-      "TRACE helps people clear mental noise and record small signs of progress. The data stays on the device.",
+      "TRACE helps people clear their head. It records small signs of progress and keeps the data on the device.",
     facts: [
       ["Focus", "Product design"],
       ["Principle", "Evidence over judgement"],
@@ -21,7 +21,7 @@ export const projects = [
     category: "Creative infrastructure",
     title: ["Creative Graph"],
     summary:
-      "Creative Graph searches for less obvious links between ideas. It shows the path and score behind every result.",
+      "Creative Graph finds links between ideas that are easy to miss. Every result shows the path and score behind it.",
     facts: [
       ["Built with", "Python · FalkorDB · MCP"],
       ["Principle", "Visible paths, not black boxes"],
@@ -38,7 +38,7 @@ export const writing = [
     index: "01",
     topic: "Technology",
     title: "What is a vector database?",
-    description: "How embeddings help computers work with meaning.",
+    description: "A simple look at how computers work with meaning.",
     href: "https://medium.com/@cozyan",
     featured: true,
   },

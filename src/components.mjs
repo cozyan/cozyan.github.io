@@ -124,3 +124,47 @@ export function renderTicker(items) {
 
   return `<div class="ticker-wrap" aria-hidden="true"><div class="ticker"><div>${content}</div></div></div>`;
 }
+
+export function renderSiteHeader({ current = "home" } = {}) {
+  const links = [
+    ["home", "Home", "index.html#top"],
+    ["work", "Work", "index.html#work"],
+    ["writing", "Writing", "index.html#words"],
+    ["about", "About", "about.html"],
+  ];
+
+  const navigation = links
+    .map(([id, label, href]) => {
+      const currentAttribute = id === current ? ' aria-current="page"' : "";
+      return `<a href="${href}"${currentAttribute}>${label}</a>`;
+    })
+    .join("");
+
+  return `<header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html#top"><span class="brand-mark" aria-hidden="true">YL</span><span>Yan Liang</span></a>
+        <div class="nav-links">${navigation}</div>
+      </nav>
+    </header>`;
+}
+
+export function renderContactSection() {
+  return `<section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="page-shell contact-inner reveal">
+        <p class="eyebrow">Say hello</p>
+        <h2 id="contact-title">Have an idea?<br><em>Say hello.</em></h2>
+        <p>I am happy to talk about products and stories. You can also show me what you are making.</p>
+        <div class="contact-links">
+          <a class="button button-dark" href="https://www.linkedin.com/in/gemma-liang/" ${externalLinkAttributes}>Find me on LinkedIn</a>
+          <a class="contact-github" href="https://github.com/cozyan" ${externalLinkAttributes}>Visit my GitHub</a>
+        </div>
+      </div>
+    </section>`;
+}
+
+export function renderFooter() {
+  return `<footer class="site-footer page-shell">
+      <span>© <span data-year></span> Yan Liang</span>
+      <span>Built with plain HTML and CSS.</span>
+    </footer>`;
+}
