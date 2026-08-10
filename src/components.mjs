@@ -117,12 +117,18 @@ export function renderWritingCard(article) {
 }
 
 export function renderTicker(items) {
-  const repeatedItems = [...items, ...items];
-  const content = repeatedItems
-    .map((item) => `${escapeHtml(item)} <i></i>`)
-    .join(" ");
+  const content = items
+    .map((item) => `<span>${escapeHtml(item)} <i></i></span>`)
+    .join("");
 
-  return `<div class="ticker-wrap" aria-hidden="true"><div class="ticker"><div>${content}</div></div></div>`;
+  return `<div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker-track">
+        <div class="ticker-group">${content}</div>
+        <div class="ticker-group">${content}</div>
+      </div>
+    </div>
+  </div>`;
 }
 
 export function renderStarField(variant = "home") {
@@ -146,8 +152,16 @@ export function renderStarField(variant = "home") {
     .join("");
 
   return `<div class="star-field star-field-${escapeHtml(variant)}" aria-hidden="true">
-      ${starMarkup}
-      <span class="tiny-constellation"><i></i><i></i><i></i><b></b><b></b></span>
+      <span class="cosmic-nebula"></span>
+      <div class="cosmic-scene">
+        <div class="cosmic-orbits">
+          <span class="cosmic-orbit orbit-one"><i></i></span>
+          <span class="cosmic-orbit orbit-two"><i></i></span>
+          <span class="cosmic-orbit orbit-three"><i></i></span>
+        </div>
+        ${starMarkup}
+        <span class="tiny-constellation"><i></i><i></i><i></i><b></b><b></b></span>
+      </div>
     </div>`;
 }
 
