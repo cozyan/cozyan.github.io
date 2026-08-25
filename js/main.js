@@ -3,6 +3,13 @@ document.documentElement.classList.add("js");
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = new Date().getFullYear();
 
+const siteHeader = document.querySelector(".site-header");
+if (siteHeader) {
+  const updateNavigationSurface = () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  updateNavigationSurface();
+  window.addEventListener("scroll", updateNavigationSurface, { passive: true });
+}
+
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealItems = document.querySelectorAll(".reveal, .reveal-line");
 

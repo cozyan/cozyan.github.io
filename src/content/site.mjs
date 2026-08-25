@@ -3,7 +3,7 @@ export const site = {
   title: "Yan Liang. Products and stories.",
   description: "Yan Liang builds thoughtful products and writes about technology, life, and stories.",
   url: "https://cozyan.github.io",
-  assetVersion: "2026-08-25-15",
+  assetVersion: "2026-08-25-16",
   location: "The Netherlands",
   social: {
     github: "https://github.com/cozyan",
