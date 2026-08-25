@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/newsreader-latin.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("/assets/fonts/newsreader-latin-italic.woff2") format("woff2-variations");
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/assets/fonts/instrument-sans-latin.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --paper: #07151b;
+  --paper-light: #0c1c22;
+  --paper-deep: #12252b;
+  --ink: #f1eee5;
+  --ink-soft: #c1cecb;
+  --muted: #91a39f;
+  --line: rgba(241, 238, 229, .16);
+  --accent: #b9ec91;
+  --accent-soft: rgba(185, 236, 145, .14);
+  --green: #17352f;
+  --yellow: #b9ec91;
+  --coral: #ee794c;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --page: min(1180px, calc(100% - 48px));
+  --project-page: min(980px, calc(100% - 48px));
+  --reading: min(680px, calc(100% - 40px));
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --ease-spring: cubic-bezier(.16, 1, .3, 1);
+  --space-xs: clamp(.65rem, .58rem + .3vw, .88rem);
+  --space-s: clamp(1rem, .86rem + .6vw, 1.4rem);
+  --space-m: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  --space-l: clamp(2.4rem, 1.75rem + 2.6vw, 4rem);
+  --space-xl: clamp(4rem, 2.5rem + 6vw, 7.5rem);
+  --space-2xl: clamp(5.5rem, 3.25rem + 9vw, 11rem);
+}

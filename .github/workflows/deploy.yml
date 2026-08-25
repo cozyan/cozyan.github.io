@@ -27,15 +27,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      - name: Install build dependencies
+        run: npm ci
       - name: Build site
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Prepare artifact
-        run: |
-          mkdir _site
-          cp index.html about.html styles.css script.js _site/
-          cp -R assets _site/assets
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

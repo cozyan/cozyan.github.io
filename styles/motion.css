@@ -1,0 +1,65 @@
+.js .reveal, .js .reveal-line {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js .reveal {
+  transition: opacity .7s ease, transform .8s var(--ease-out);
+}
+
+.js .reveal-line {
+  transition: opacity .8s ease, transform 1s var(--ease-out);
+}
+
+.js .reveal.is-visible, .js .reveal-line.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.js .hero-title .reveal-line:nth-child(2) { transition-delay: 100ms; }
+.js .hero-title .reveal-line:nth-child(3) { transition-delay: 200ms; }
+
+.js .project-story .product-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  background: #17352f;
+  transform: translateX(0);
+  transform-origin: right;
+  transition: transform .9s var(--ease-spring) .18s;
+  pointer-events: none;
+}
+
+.js .project-story.is-visible .product-visual::after {
+  transform: translateX(101%);
+}
+
+.js .project-creative-graph .product-visual::after {
+  background: var(--accent);
+}
+
+@supports (animation-timeline: view()) {
+  .graph-line {
+    stroke-dashoffset: 1;
+    animation: draw-path linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 55%;
+  }
+}
+
+@supports (view-transition-name: none) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
+}
+
+@keyframes draw-path { to { stroke-dashoffset: 0; } }
+@keyframes ticker-scroll { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js .reveal, .js .reveal-line { opacity: 1; transform: none; }
+  .js .project-story .product-visual::after { display: none; }
+  .ticker div { animation: none; transform: none; }
+}
