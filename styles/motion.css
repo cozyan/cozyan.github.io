@@ -50,7 +50,10 @@
 
 @supports (view-transition-name: none) {
   @view-transition { navigation: auto; }
-  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
+  ::view-transition-old(root), ::view-transition-new(root) {
+    background-color: #07151b;
+    animation-duration: .35s;
+  }
 }
 
 @keyframes draw-path { to { stroke-dashoffset: 0; } }

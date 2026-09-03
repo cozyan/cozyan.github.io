@@ -12,6 +12,7 @@ export function renderDocument({ title, description, path, current, body, bodyCl
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="theme-color" content="#07151b">
+  <meta name="color-scheme" content="dark">
   <meta property="og:title" content="${escapeHtml(pageTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:type" content="website">
@@ -23,6 +24,7 @@ export function renderDocument({ title, description, path, current, body, bodyCl
   <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <title>${escapeHtml(pageTitle)}</title>
   <link rel="icon" href="/assets/avatar.png">
+  <style>html,body{background-color:#07151b}</style>
   <link rel="stylesheet" href="/styles.css?v=${site.assetVersion}">
   <script src="/script.js?v=${site.assetVersion}" defer></script>
 </head>

@@ -118,9 +118,11 @@ for (const layout of writingLists) {
   const preview = layout.querySelector(".writing-preview");
   const topic = preview?.querySelector("[data-preview-topic]");
   const copy = preview?.querySelector("[data-preview-copy]");
+  const hint = preview?.querySelector("[data-preview-hint]");
   const rows = layout.querySelectorAll("[data-writing-preview]");
   if (!preview || !topic || !copy) continue;
   const narrowLayout = window.matchMedia("(max-width: 900px)");
+  const hoverPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   let activeRow = rows[0];
   let previewTimer;
 
@@ -128,6 +130,11 @@ for (const layout of writingLists) {
   const placePreview = () => {
     if (narrowLayout.matches && activeRow) activeRow.insertAdjacentElement("afterend", preview);
     else layout.append(preview);
+    if (hint) {
+      hint.textContent = narrowLayout.matches
+        ? "Tap the selected title again to open it"
+        : "Choose a title to read another passage";
+    }
   };
 
   const showPreview = (row) => {
@@ -144,8 +151,33 @@ for (const layout of writingLists) {
   };
 
   rows.forEach((row) => {
-    row.addEventListener("pointerenter", () => showPreview(row));
-    row.addEventListener("focus", () => showPreview(row));
+    let previewTapPending = false;
+
+    row.addEventListener("pointerenter", () => {
+      if (hoverPointer.matches) showPreview(row);
+    });
+
+    row.addEventListener("pointerdown", (event) => {
+      previewTapPending = narrowLayout.matches
+        && event.pointerType !== "mouse"
+        && event.isPrimary
+        && row !== activeRow;
+    });
+
+    row.addEventListener("focus", () => {
+      if (!previewTapPending) showPreview(row);
+    });
+
+    row.addEventListener("click", (event) => {
+      if (!previewTapPending) return;
+      event.preventDefault();
+      showPreview(row);
+      previewTapPending = false;
+    });
+
+    row.addEventListener("pointercancel", () => {
+      previewTapPending = false;
+    });
   });
 
   placePreview();

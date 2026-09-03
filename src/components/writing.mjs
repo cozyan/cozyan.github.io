@@ -23,7 +23,7 @@ export function renderWritingList(articles, { heading = true } = {}) {
     <aside class="writing-preview" aria-live="polite" aria-label="Selected article preview">
       <div class="writing-preview-top"><span data-preview-topic>${escapeHtml(articles[0]?.topic ?? "Writing")}</span><span>Preview</span></div>
       <p data-preview-copy>${escapeHtml(articles[0]?.preview ?? "")}</p>
-      <span class="writing-preview-hint">Choose a title to read another passage</span>
+      <span class="writing-preview-hint" data-preview-hint>Choose a title to read another passage</span>
     </aside>
   </div>`;
 }
